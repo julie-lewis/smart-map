@@ -1,0 +1,228 @@
+/*************
+MAIN STYLES
+*************/
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #f6f6f6;
+}
+
+h1 {
+  font-size: 1.2em;
+  color: #808080;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+p {
+  color: #808080;
+  font-size: 16px;
+  font-weight: 300;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+button {
+  height: 3em;
+  width: 100%;
+  background-color: #7477bf;
+  border: 0;
+  border-radius: 4px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: .5em;
+}
+.bold {
+  font-weight: 700;
+}
+
+.flex-item-1 {
+  margin-right: auto;
+}
+.flex-item-last {
+  margin-left: auto;
+}
+
+
+/*************
+HEADER
+*************/
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em;
+  color: #ffffff;
+}
+
+/*************
+NAVIGATION
+*************/
+#overlay {
+  text-transform: capitalize;
+}
+
+/*************
+MODAL POP UPS
+*************/
+#overlay-wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 2em;
+  overflow: auto;
+}
+
+/*.overlay-wrapper:after {
+  opacity: 0.5;
+}*/
+
+#overlay-content {
+  width: 30%;
+  min-width: 350px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 50px rgba(10, 10, 10, 0.5);
+  opacity: 1;
+  text-align: center;
+  margin: 50px auto 2em;
+}
+
+#overlay  {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  min-width: 350px;
+  padding: 30px 50px 80px 50px;
+  text-align: center;
+}
+
+#overlay hr {
+  height: 1px;
+  background: #ccc;
+  width: 100%;
+  border: none;
+}
+
+#overlay p {
+  margin: 5px;
+  font-size: 1em;
+  line-height: 1.7em;
+}
+
+#overlay #close {
+  cursor: pointer;
+  margin: 0;
+  opacity: 0.4;
+  transition: all 200ms;
+  font-size: 24px;
+  font-weight: 300;
+  text-decoration: none;
+  color: #000;
+  margin-left: 10px;
+  text-align: right;
+}
+
+#overlay #close:hover {
+  opacity: 1;
+}
+
+/*************
+MAP STYLES
+*************/
+  #map {
+    height: 600px;
+  }
+
+/*************
+FORM STYLES
+*************/
+input,
+select,
+textarea {
+  font-weight: 300;
+  color: #808080;
+  width: 100%;
+  padding: 1em;
+  margin-bottom: 1em;
+  background-color: #faf8f8;
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+  #locationField, #controls {
+   position: relative;
+   width: 480px;
+ }
+ #autocomplete {
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   width: 99%;
+ }
+ .label {
+   text-align: right;
+   font-weight: bold;
+   width: 100px;
+   color: #303030;
+ }
+ #address {
+   border: 1px solid #000090;
+   background-color: #f0f0ff;
+   width: 480px;
+   padding-right: 2px;
+ }
+ #address td {
+   font-size: 10pt;
+ }
+ .field {
+   width: 99%;
+ }
+ .slimField {
+   width: 80px;
+ }
+ .wideField {
+   width: 200px;
+ }
+ #locationField {
+   height: 20px;
+   margin-bottom: 2px;
+ }
+
+
+/*************
+MED-LARGE SCREENS
+*************/
+@media (min-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-grow: 1;
+    padding: 0;
+  }
+
+/*************
+LARGE SCREENS
+*************/
+@media (min-width: 1024px) {
+
+}
