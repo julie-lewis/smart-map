@@ -2,31 +2,66 @@
   {
     "name": "Chemwash 1",
     "phone": "0800 CHEMWASH",
+    "email": "office@chemwashsouthauckland.co.nz",
     "lat": 53.817680,
-    "lng": -1.537657
+    "lng": -1.537657,
+    "territory" : [
+    {"lat": -32.364, "lng": 153.207},
+    {"lat": -35.364, "lng": 153.207},
+    {"lat": -35.364, "lng": 158.207},
+    {"lat": -32.364, "lng": 158.207}
+    ]
   },
   {
     "name": "Chemwash 2",
     "phone": "0800 CHEMWASH",
-    "lat": 53.790123,
-    "lng": -1.53243
+    "email": "office@chemwashsouthauckland.co.nz",
+    "lat": 33.790123,
+    "lng": -1.53243,
+    "territory" : [
+    {"lat": -32.364, "lng": 153.207},
+    {"lat": -35.364, "lng": 153.207},
+    {"lat": -35.364, "lng": 158.207},
+    {"lat": -32.364, "lng": 158.207}
+    ]
   },
   {
     "name": "Chemwash 3",
     "phone": "0800 CHEMWASH",
+    "email": "office@chemwashsouthauckland.co.nz",
     "lat": 53.756745,
-    "lng": -1.5309087
+    "lng": -1.5309087,
+    "territory" : [
+    {"lat": -32.364, "lng": 153.207},
+    {"lat": -35.364, "lng": 153.207},
+    {"lat": -35.364, "lng": 158.207},
+    {"lat": -32.364, "lng": 158.207}
+    ]
   },
   {
     "name": "Chemwash 4",
     "phone": "0800 CHEMWASH",
+    "email": "office@chemwashsouthauckland.co.nz",
     "lat": 53.6474675,
-    "lng": -1.49564554
+    "lng": -1.49564554,
+    "territory" : [
+    {"lat": -32.364, "lng": 153.207},
+    {"lat": -35.364, "lng": 153.207},
+    {"lat": -35.364, "lng": 158.207},
+    {"lat": -32.364, "lng": 158.207}
+    ]
   },
   {
     "name": "Chemwash 5",
     "phone": "0800 CHEMWASH",
+    "email": "office@chemwashsouthauckland.co.nz",
     "lat": 53.69123456,
-    "lng": -1.6545466
+    "lng": -1.6545466,
+    "territory" : [
+    {"lat": -32.364, "lng": 153.207},
+    {"lat": -35.364, "lng": 153.207},
+    {"lat": -35.364, "lng": 158.207},
+    {"lat": -32.364, "lng": 158.207}
+    ]
   }
 ]
