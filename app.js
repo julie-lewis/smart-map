@@ -33,25 +33,26 @@ function initMap()
     zoom: 8
   });
 
+  // Gets and renders JSON file data, per plotMarkers function
+  // fetch('markers.json')
+  //   .then(function(response){return response.json()})
+  //   .then(plotMarkers);
+
+  // Gets markers from Window
+  const markers = window.MARKERS;
+  plotMarkers(markers);
+
   //Creates cluster markers, using cluster icons from Image folder
   var markerCluster = new MarkerClusterer(map, markers,
           {imagePath: 'images'});
-
-  // Gets and renders JSON file data, per plotMarkers function
-  fetch('markers.json')
-    .then(function(response){return response.json()})
-    .then(plotMarkers);
-
 }
 
 // ********************************************
 // PLOT MARKERS
 // ********************************************
-var markers;
-
 function plotMarkers(m)
 {
-  markers = [];
+  let markers = [];
   let bounds = new google.maps.LatLngBounds();
 
   m.forEach(function (marker) {
