@@ -23,39 +23,32 @@ function initialize() {
 // ********************************************
 // SET MAP
 // ********************************************
-var map;
-
 function initMap()
 {
   //Creates new map
-  map = new google.maps.Map(document.getElementById('map'), {
+  const map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: -34.397, lng: 150.644},
     zoom: 8
   });
 
-  // Gets and renders JSON file data, per plotMarkers function
-  // fetch('markers.json')
-  //   .then(function(response){return response.json()})
-  //   .then(plotMarkers);
-
   // Gets markers from Window
   const markers = window.MARKERS;
-  plotMarkers(markers);
+  const gMarkers = plotMarkers(markers, map);
 
   //Creates cluster markers, using cluster icons from Image folder
-  var markerCluster = new MarkerClusterer(map, markers,
-          {imagePath: 'images'});
+  var markerCluster = new MarkerClusterer(map, gMarkers,
+          {imagePath: 'images/m'});
 }
 
 // ********************************************
 // PLOT MARKERS
 // ********************************************
-function plotMarkers(m)
+function plotMarkers(markers, map)
 {
-  let markers = [];
-  let bounds = new google.maps.LatLngBounds();
+  const bounds = new google.maps.LatLngBounds();
+  const googleMarkers = [];
 
-  m.forEach(function (marker) {
+  markers.forEach(function (marker) {
     //sets position of marker, based on lng/lat from object
     var position = new google.maps.LatLng(marker.lat, marker.lng);
     //sets content of infoWindow, to be called later
@@ -66,7 +59,7 @@ function plotMarkers(m)
                 '</div>'
     ;
 
-    marker =
+    const googleMarker =
       new google.maps.Marker({
         position: position,
         map: map,
@@ -76,16 +69,19 @@ function plotMarkers(m)
 
     infoWindow = new google.maps.InfoWindow({ content: infoContent });
 
-    marker.addListener('mouseover', function() {
+    googleMarker.addListener('mouseover', function() {
        infoWindow.setContent( this.info );
        infoWindow.open( map, this );
     });
+
+    googleMarkers.push(googleMarker);
 
     bounds.extend(position);
 
   });
 
   map.fitBounds(bounds);
+  return googleMarkers;
 
 }
 
@@ -93,10 +89,10 @@ function plotMarkers(m)
 // ********************************************
 // MODAL CONTROLS
 // ********************************************
+const overlayWrap = document.getElementById('overlay-wrapper');
 
 // Open Modal on click
 $("#map").on('click', '#contactButton', e => {
-  const overlayWrap = document.getElementById('overlay-wrapper');
   overlayWrap.style.display = "block";
 });
 

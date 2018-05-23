@@ -89,28 +89,24 @@ FORM STYLES
 input,
 select,
 textarea {
-  font-weight: 300;
-  color: #808080;
-  width: 100%;
+  width: 75%;
   padding: 1em;
-  margin-bottom: 1em;
-  background-color: #faf8f8;
-  border: 1px solid lightgrey;
-  border-radius: 4px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  box-sizing: border-box;
+}
+
+textarea {
+  width: 100%
 }
 
   #locationField, #controls {
    position: relative;
-   width: 480px;
+   width: 100%;
  }
  #autocomplete {
    position: absolute;
    top: 0px;
    left: 0px;
-   width: 99%;
+   width: 98%;
  }
  .label {
    text-align: right;
@@ -121,8 +117,10 @@ textarea {
  #address {
    border: 1px solid #000090;
    background-color: #f0f0ff;
-   width: 480px;
-   padding-right: 2px;
+   width: 100%;
+   min-width: 400px;
+   max-width: 800px;
+   margin-top: 1.5em;
  }
  #address td {
    font-size: 10pt;

@@ -11,68 +11,68 @@
     <script>
       window.MARKERS = [
       {
-        "name": "Chemwash 1",
-        "phone": "0800 CHEMWASH",
+        "name": "Chemwash Rotorua",
+        "phone": "07-349 4836",
         "email": "office@chemwashsouthauckland.co.nz",
-        "lat": 53.817680,
-        "lng": -1.537657,
+        "lat": -38.1340592,
+        "lng": 176.2235869,
         "territory" : [
-        {"lat": -32.364, "lng": 153.207},
-        {"lat": -35.364, "lng": 153.207},
-        {"lat": -35.364, "lng": 158.207},
-        {"lat": -32.364, "lng": 158.207}
+        {"lat": -38.0364, "lng": 176.2035869},
+        {"lat": -39.364, "lng": 176.2035869},
+        {"lat": -39.364, "lng": 176.2335869},
+        {"lat": -38.0364, "lng": 176.2335869}
         ]
       },
       {
-        "name": "Chemwash 2",
-        "phone": "0800 CHEMWASH",
+        "name": "Chemwash Tauranga",
+        "phone": "07-576 2154",
         "email": "office@chemwashsouthauckland.co.nz",
-        "lat": 33.790123,
-        "lng": -1.53243,
+        "lat": -37.7004376,
+        "lng": 176.1484642,
         "territory" : [
-        {"lat": -32.364, "lng": 153.207},
-        {"lat": -35.364, "lng": 153.207},
-        {"lat": -35.364, "lng": 158.207},
-        {"lat": -32.364, "lng": 158.207}
+        {"lat": -37.6004376, "lng": 176.1084642},
+        {"lat": -37.8004376, "lng": 176.1084642},
+        {"lat": -37.8004376, "lng": 176.1584642},
+        {"lat": -37.6004376, "lng": 176.1584642}
         ]
       },
       {
-        "name": "Chemwash 3",
-        "phone": "0800 CHEMWASH",
+        "name": "Chemwash - One Tree Hill",
+        "phone": "09-638 8345",
         "email": "office@chemwashsouthauckland.co.nz",
-        "lat": 53.756745,
-        "lng": -1.5309087,
+        "lat": -36.8554795,
+        "lng": 174.676718,
         "territory" : [
-        {"lat": -32.364, "lng": 153.207},
-        {"lat": -35.364, "lng": 153.207},
-        {"lat": -35.364, "lng": 158.207},
-        {"lat": -32.364, "lng": 158.207}
+        {"lat": -36.7554795, "lng": 174.576718},
+        {"lat": -36.9554795, "lng": 174.576718},
+        {"lat": -36.9554795, "lng": 174.776718},
+        {"lat": -36.7554795, "lng": 174.776718}
         ]
       },
       {
-        "name": "Chemwash 4",
-        "phone": "0800 CHEMWASH",
+        "name": "Chemwash Wellington",
+        "phone": "04-474 2255",
         "email": "office@chemwashsouthauckland.co.nz",
-        "lat": 53.6474675,
-        "lng": -1.49564554,
+        "lat": -41.1498938,
+        "lng": 174.830503,
         "territory" : [
-        {"lat": -32.364, "lng": 153.207},
-        {"lat": -35.364, "lng": 153.207},
-        {"lat": -35.364, "lng": 158.207},
-        {"lat": -32.364, "lng": 158.207}
+        {"lat": -41.0498938, "lng": 174.730503},
+        {"lat": -41.2498938, "lng": 174.730503},
+        {"lat": -41.2498938, "lng": 174.930503},
+        {"lat": -41.0498938, "lng": 174.930503}
         ]
       },
       {
-        "name": "Chemwash 5",
-        "phone": "0800 CHEMWASH",
+        "name": "Chemwash Christchurch",
+        "phone": "027 226 6378",
         "email": "office@chemwashsouthauckland.co.nz",
-        "lat": 53.69123456,
-        "lng": -1.6545466,
+        "lat": -43.544805,
+        "lng": 172.4633339,
         "territory" : [
-        {"lat": -32.364, "lng": 153.207},
-        {"lat": -35.364, "lng": 153.207},
-        {"lat": -35.364, "lng": 158.207},
-        {"lat": -32.364, "lng": 158.207}
+        {"lat": -43.444805, "lng": 172.0633339},
+        {"lat": -43.644805, "lng": 172.0633339},
+        {"lat": -43.644805, "lng": 172.5633339},
+        {"lat": -43.444805, "lng": 172.5633339}
         ]
       }
     ]
@@ -84,43 +84,69 @@
     <div id="overlay-wrapper">
       <div id="overlay-content">
         <div id="overlay">
-          <span id="close" class="close">&times;</span>'
-          <div id="locationField">
-          <input id="autocomplete" placeholder="Enter your address"
-                 onFocus="geolocate()" type="text"></input>
-          </div>
-
-          <table id="address">
-            <tr>
-              <td class="label">Street address</td>
-              <td class="slimField"><input class="field" id="street_number"
-                    disabled="true"></input></td>
-              <td class="wideField" colspan="2"><input class="field" id="route"
-                    disabled="true"></input></td>
-            </tr>
-            <tr>
-              <td class="label">City</td>
-              <!-- Note: Selection of address components in this example is typical.
-                   You may need to adjust it for the locations relevant to your app. See
-                   https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-addressform
-              -->
-              <td class="wideField" colspan="3"><input class="field" id="locality"
-                    disabled="true"></input></td>
-            </tr>
-            <tr>
-              <td class="label">State</td>
-              <td class="slimField"><input class="field"
-                    id="administrative_area_level_1" disabled="true"></input></td>
-              <td class="label">Zip code</td>
-              <td class="wideField"><input class="field" id="postal_code"
-                    disabled="true"></input></td>
-            </tr>
-            <tr>
-              <td class="label">Country</td>
-              <td class="wideField" colspan="3"><input class="field"
-                    id="country" disabled="true"></input></td>
-            </tr>
-          </table>
+          <span id="close" class="close">&times;</span>
+          <h2>Request a Quote</h2>
+          <p>Input your information and we will be in touch to arrange a free, no-obligation quote</p>
+          <hr>
+          <form action="/enquiry/process" method="post" name="form_enquiry" id="form_enquiry">
+            <input name="subject" value="Website Contact Form" type="hidden">
+            <p>
+              <label for="name">Your Name</label>
+              <span class="required">*</span>
+              <input id="name" class="input text required" name="name" placeholder="Your Name" value="" type="text">
+            </p>
+            <p>
+              <label for="email">Your Email</label>
+              <span class="required">*</span>
+              <input id="email" class="input text required email" name="email" placeholder="Your Email" value="" type="text">
+            </p>
+            <p>
+              <label for="phone">Your Phone</label>
+              <span class="required">*</span>
+              <input id="phone" class="input text required" name="phone" placeholder="Your Phone" value="" type="text">
+            </p>
+            <hr>
+            <label for="locationField">Job Address</label>
+            <div id="locationField">
+              <input id="autocomplete" placeholder="Enter your address"
+                   onFocus="geolocate()" type="text"></input>
+            </div>
+            <table id="address">
+              <tr>
+                <td class="label">Street address</td>
+                <td class="slimField"><input class="field" id="street_number"
+                      disabled="true"></input></td>
+                <td class="wideField" colspan="2"><input class="field" id="route"
+                      disabled="true"></input></td>
+              </tr>
+              <tr>
+                <td class="label">City</td>
+                <td class="wideField" colspan="3"><input class="field" id="locality"
+                      disabled="true"></input></td>
+              </tr>
+              <tr>
+                <td class="label">State</td>
+                <td class="slimField"><input class="field"
+                      id="administrative_area_level_1" disabled="true"></input></td>
+                <td class="label">Zip code</td>
+                <td class="wideField"><input class="field" id="postal_code"
+                      disabled="true"></input></td>
+              </tr>
+              <tr>
+                <td class="label">Country</td>
+                <td class="wideField" colspan="3"><input class="field"
+                      id="country" disabled="true"></input></td>
+              </tr>
+            </table>
+            <hr>
+            <p>
+              <label for="message">Your Cleaning Requirements</label>
+                <textarea placeholder="Your Cleaning Requirements or any Message" name="message" id="message" class="text"></textarea>
+            </p>
+            <p>
+              <input name="submit" id="submit" value="Send Now" class="button" type="submit">
+            </p>
+          </form>
 
         </div><!-- overlay -->
       </div><!-- overlay-content -->
