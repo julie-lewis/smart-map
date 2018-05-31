@@ -39,10 +39,12 @@ function initMap()
   var markerCluster = new MarkerClusterer(map, gMarkers,
           {imagePath: 'images/m'});
 
-  const cluster = document.getElementById('cluster');
-  cluster.addEventListener('mouseover', function () {
-    console.log('test');
-  });
+  //trying to hook into markerCluster with delegated event listener
+  // window.addEventListener('click', function (e) {
+  //   if (e.target == markerCluster) {
+  //     console.log('test');
+  //   }
+  // });
 }
 
 
