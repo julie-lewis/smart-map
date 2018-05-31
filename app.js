@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var js_file = document.createElement('script');
     js_file.type = 'text/javascript';
-    js_file.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAJy7fFz2MNZ5zlNnpbG0FnDHlWJUClNsc&libraries=places&callback=initialize&language=' + lang;
+    js_file.src = 'https://maps.googleapis.com/maps/api/js?&key=AIzaSyAJy7fFz2MNZ5zlNnpbG0FnDHlWJUClNsc&libraries=places&callback=initialize&language=' + lang;
     document.getElementsByTagName('head')[0].appendChild(js_file);
   }
 });
@@ -38,7 +38,16 @@ function initMap()
   //Creates cluster markers, using cluster icons from Image folder
   var markerCluster = new MarkerClusterer(map, gMarkers,
           {imagePath: 'images/m'});
+
+  const cluster = document.getElementById('cluster');
+  cluster.addEventListener('mouseover', function () {
+    console.log('test');
+  });
 }
+
+
+
+
 
 // ********************************************
 // PLOT MARKERS
@@ -58,12 +67,14 @@ function plotMarkers(markers, map)
                   '<button>Request a Quote</button>' +
                 '</div>'
     ;
+    const image = 'images/maps-marker.png';
 
     const googleMarker =
       new google.maps.Marker({
         position: position,
         map: map,
         info: infoContent,
+        icon: image,
         animation: google.maps.Animation.DROP
       });
 
@@ -130,7 +141,10 @@ function initAutocomplete() {
   // location types.
   autocomplete = new google.maps.places.Autocomplete(
       /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
-      {types: ['geocode']});
+      {
+        types: ['geocode'],
+        componentRestrictions: {country: 'nz'}
+      });
 
   // When the user selects an address from the dropdown, populate the address
   // fields in the form.
